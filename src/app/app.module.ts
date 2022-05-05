@@ -7,13 +7,15 @@ import { SliderComponent } from './slider/slider.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { TaskComponent } from './task/task.component';
 import { MaterialModule } from './material/material.module';
+import { datePipe } from './pipe.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     SliderComponent,
     CalendarComponent,
-    TaskComponent
+    TaskComponent,
+    datePipe
   ],
   imports: [
     MaterialModule,

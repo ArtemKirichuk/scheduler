@@ -1,11 +1,11 @@
 <p>
-<button mat-icon-button color="primary" aria-label="Example icon button with a home icon">
+<button mat-icon-button color="primary"   (click)="fnChMonth(-1)" aria-label="Example icon button with a home icon">
     <mat-icon>arrow_back_ios</mat-icon>
   </button>
 
-<span>12.01.2020</span>
+<span>{{toDay|formatDate:'DD.MM.yyyy'}}</span>
 
-<button mat-icon-button color="primary" aria-label="Example icon button with a home icon">
+<button mat-icon-button color="primary" (click)="fnChMonth(1)" aria-label="Example icon button with a home icon">
     <mat-icon>arrow_forward_ios</mat-icon>
   </button>
 </p>
