@@ -8,6 +8,8 @@ import { CalendarComponent } from './calendar/calendar.component';
 import { TaskComponent } from './task/task.component';
 import { MaterialModule } from './material/material.module';
 import { datePipe } from './pipe.pipe';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,12 +17,15 @@ import { datePipe } from './pipe.pipe';
     SliderComponent,
     CalendarComponent,
     TaskComponent,
-    datePipe
+    datePipe,
+    
   ],
   imports: [
+    ReactiveFormsModule,
     MaterialModule,
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

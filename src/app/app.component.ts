@@ -9,8 +9,8 @@ import * as moment from 'moment';
 export class AppComponent {
   title = 'calendar';
   constructor() {
-    // moment.updateLocale('ru',{
-    //   parentLocale: 'ru'
-    // }) 
+    moment.updateLocale('ru',{
+      parentLocale: 'ru'
+    }) 
   }
 }

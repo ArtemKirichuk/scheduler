@@ -18,7 +18,7 @@ export class DateService {
     this.date.next(date);
   }
   constructor() { 
-    this.mDate.locale('ru')
+    // this.mDate.locale('ru')
     this.date = new BehaviorSubject(this.mDate);
     
     // moment.locale('ru');

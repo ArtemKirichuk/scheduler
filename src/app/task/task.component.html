@@ -1,1 +1,6 @@
-<p>task works!</p>
+<div class="container">
+  <mat-form-field>
+    <input matInput placeholder="Наименование задачи" [formControl]="task"/>
+  </mat-form-field>
+  <button (click)="fnAddTask()" mat-button>Добавить</button>
+</div>
