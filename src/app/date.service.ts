@@ -1,13 +1,15 @@
 import { Injectable } from '@angular/core';
 import  moment from 'moment';
+
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DateService {
+  private mDate = moment();
   
-  private date = new BehaviorSubject(moment())
+  private date:BehaviorSubject<moment.Moment>;
   fnGetDate(){
     return this.date.value;
   }
@@ -16,6 +18,9 @@ export class DateService {
     this.date.next(date);
   }
   constructor() { 
+    this.mDate.locale('ru')
+    this.date = new BehaviorSubject(this.mDate);
+    
     // moment.locale('ru');
   }
 }
