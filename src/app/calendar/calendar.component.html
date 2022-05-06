@@ -1,3 +1,21 @@
-
-<p>calendar works!</p>
-
+<!-- <pre>{{aMonth|json}}</pre> -->
+<table mat-table [dataSource]="aMonth" class="mat-elevation-z8">
+  <ng-container
+    *ngFor="let i of [0, 1, 2, 3, 4, 5, 6]"
+    matColumnDef="{{ aWeekDays[i] }}"
+  >
+    <th mat-header-cell *matHeaderCellDef>{{ aWeekDaysRu[i] }}</th>
+    <td
+      mat-cell
+      *matCellDef="let element"
+      [class.disabled]="element[aWeekDays[i]].disabled"
+      [class.active]="element[aWeekDays[i]].active"
+      [class.selected]="element[aWeekDays[i]].selected"
+      (click)="fnSelectDate(element[aWeekDays[i]])"
+    >
+      {{ element[aWeekDays[i]].day | formatDate: "DD MMM" }}
+    </td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="aWeekDays"></tr>
+  <tr mat-row *matRowDef="let row; columns: aWeekDays"></tr>
+</table>

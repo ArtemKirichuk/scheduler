@@ -8,17 +8,17 @@ import { DateService } from '../date.service';
   styleUrls: ['./slider.component.scss']
 })
 export class SliderComponent implements OnInit {
-  toDay = moment();
+  dToDay = moment();
   // dateServise!:DateService;
   constructor(public dateService:DateService) {
-    dateService.fnGetSubject().subscribe((mDate)=>{ this.toDay = mDate })
+    dateService.fnGetSubject().subscribe((mDate)=>{ this.dToDay = mDate })
   }
   
   ngOnInit(): void {
     
   }
   fnChMonth(month:number){
-    let newDate = this.toDay.clone().add(month,'month');
+    let newDate = this.dToDay.clone().add(month,'month');
     this.dateService.fnSetDate(newDate);
   }
 }

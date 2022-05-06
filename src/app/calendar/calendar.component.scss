@@ -1,0 +1,33 @@
+table{
+    width: 600px;
+    margin: auto;
+}
+
+th.mat-header-cell{
+    text-align: center;
+    
+}
+td.mat-cell{
+    text-align: center;
+    transition: all .2s;
+    &.disabled{
+        opacity: 0.8;
+        cursor: default;
+    }
+    
+    &.active{
+        color: #3f51b5;
+        font-weight: bold;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+    }
+    &.selected{
+        color: #f44336;
+ 
+    }
+    &:hover:not(.disabled){
+        color: #f44336;
+        cursor: pointer;
+    }
+
+}

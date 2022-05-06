@@ -6,6 +6,7 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class DateService {
+  
   private date = new BehaviorSubject(moment())
   fnGetDate(){
     return this.date.value;
@@ -14,5 +15,7 @@ export class DateService {
   fnSetDate(date:moment.Moment){
     this.date.next(date);
   }
-  constructor() { }
+  constructor() { 
+    // moment.locale('ru');
+  }
 }
