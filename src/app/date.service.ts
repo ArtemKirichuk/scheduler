@@ -13,7 +13,8 @@ export class DateService {
   fnGetDate(){
     return this.date.value;
   }
-  fnGetSubject=()=>{return this.date}
+  fnGetSubject(){return this.date}
+
   fnSetDate(date:moment.Moment){
     this.date.next(date);
   }

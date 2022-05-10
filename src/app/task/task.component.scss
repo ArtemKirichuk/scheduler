@@ -1,10 +1,19 @@
 .container{
-    
+    border: 1px dashed #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    display: flex;
+
     margin-top: 20px;
-    & mat-form-field{
+    & form{
         width: 100%;
     }
-    & input{
-        width: 100%;
-    }
+}
+
+
+ mat-form-field{
+    width: 100%;
+}
+ input{
+    width: 100%;
 }

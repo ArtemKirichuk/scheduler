@@ -28,6 +28,7 @@ export class CalendarComponent implements OnInit {
   fnSelectDate(day: ifDay) {
 
     this.dateService.fnSetDate(day.day);
+    // fnGetTask
   }
   ngOnInit(): void {
     // this.fnCreateCalendar()
