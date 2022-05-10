@@ -1,5 +1,5 @@
 # StackBlitz
-[StackBlitz]https://stackblitz.com/github/ArtemKirichuk/scheduler
+[StackBlitz](https://stackblitz.com/github/ArtemKirichuk/scheduler)
 # Calendar
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.4.
